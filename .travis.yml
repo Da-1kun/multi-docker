@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t da1kun/react-test -f ./client/Dockerfile.dev
+  - docker build -t da1kun/react-test -f ./client/Dockerfile.dev ./clinet
 
 script:
   - docker run -e CI=true da1kun/react-test npm test
