@@ -23,7 +23,6 @@ after_success:
   - docker push da1kun/multi-worker
 
 deploy:
-  edge: true
   provider: elasticbeanstalk
   region: ap-northeast-1
   app: multi-docker
@@ -33,5 +32,4 @@ deploy:
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_KEY
+  secret_access_key: $AWS_SECRET_KEY
